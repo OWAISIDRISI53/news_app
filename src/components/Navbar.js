@@ -6,7 +6,7 @@ export class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg bg-light">
+      <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             NewsMonkey
@@ -32,6 +32,42 @@ export class Navbar extends Component {
               <li className="nav-item">
                 <a className="nav-link" href="/about">
                   About
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  business
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  entertainment
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  general
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  health
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  science
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  sports
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  technology
                 </a>
               </li>
             </ul>
