@@ -2,10 +2,18 @@ import React, { Component } from "react";
 
 export class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl, url } = this.props;
+    let { title, description, imageUrl, url, author, date, source } =
+      this.props;
     return (
       <div className="my-3">
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card ">
+          <span
+            className="position-absolute top-0 translate-middle badge rounded-pill bg-danger"
+            style={{ left: "90%", zIndex: "1" }}
+          >
+            {source}
+          </span>
+
           <img
             height={200}
             src={
@@ -20,7 +28,15 @@ export class NewsItem extends Component {
           <div className="card-body">
             <h5 className="card-title">{title} ...</h5>
             <p className="card-text">{description} ...</p>
-            <a href={url} target="_black" className="btn btn-sm btn-dark">
+            <div className=" text-muted my-2">
+              By{" "}
+              <strong className="text-danger fw-bold">
+                {!author ? "Unknown" : author}
+              </strong>{" "}
+              on {new Date(date).toGMTString()}
+            </div>
+
+            <a href={url} target="_black" className="btn  btn-dark">
               Read More
             </a>
           </div>
